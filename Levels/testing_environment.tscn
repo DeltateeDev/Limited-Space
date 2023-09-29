@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpjmad7gw277g"]
+
+[ext_resource type="PackedScene" uid="uid://8u45ceex3opq" path="res://Objects/block.tscn" id="1_b3hbc"]
+[ext_resource type="PackedScene" uid="uid://b424m3t6mdj45" path="res://Objects/player.tscn" id="2_40wbg"]
+
+[node name="Testing Environment" type="Node2D"]
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="Block" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(96, 608)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(160, 608)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(224, 608)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(288, 608)
+
+[node name="Block5" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(352, 608)
+
+[node name="Block10" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(800, 608)
+
+[node name="Block11" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(864, 608)
+
+[node name="Block12" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(928, 608)
+
+[node name="Block13" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(992, 608)
+
+[node name="Block14" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(1056, 608)
+
+[node name="Block6" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(352, 544)
+
+[node name="Block7" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(352, 480)
+
+[node name="Block15" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(800, 544)
+
+[node name="Block16" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(800, 480)
+
+[node name="Block8" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(480, 480)
+
+[node name="Block9" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(672, 480)
+
+[node name="Player" parent="." instance=ExtResource("2_40wbg")]
+position = Vector2(160, 488)

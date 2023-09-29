@@ -1,0 +1,5 @@
+res://Objects/block.tscn
+res://Levels/testing_environment.tscn
+res://Objects/player.tscn
+res://Scripts/Globals.gd
+res://Scripts/PlayerMovement.gd
