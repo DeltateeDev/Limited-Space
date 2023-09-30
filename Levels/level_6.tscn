@@ -1,0 +1,174 @@
+[gd_scene load_steps=6 format=3 uid="uid://1ndl31a1ikoa"]
+
+[ext_resource type="Script" path="res://Scripts/level_6.gd" id="1_agi5a"]
+[ext_resource type="PackedScene" uid="uid://8u45ceex3opq" path="res://Objects/block.tscn" id="1_xio8c"]
+[ext_resource type="PackedScene" uid="uid://b424m3t6mdj45" path="res://Objects/player.tscn" id="2_gdwsm"]
+[ext_resource type="PackedScene" uid="uid://6oulcrs1th07" path="res://Objects/space_bonus.tscn" id="3_3tyme"]
+[ext_resource type="PackedScene" uid="uid://ct7u8tpcp6xex" path="res://Objects/ui.tscn" id="4_qedso"]
+
+[node name="Level6" type="Node2D"]
+position = Vector2(-1, 0)
+script = ExtResource("1_agi5a")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 320)
+zoom = Vector2(0.8, 0.8)
+metadata/_edit_lock_ = true
+
+[node name="Blocks" type="Node2D" parent="."]
+position = Vector2(1, 64)
+
+[node name="Block" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(-32, 224)
+
+[node name="Block34" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(-32, 160)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(-32, 288)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(-32, 352)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(-32, 416)
+
+[node name="Block5" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(32, 416)
+
+[node name="Block6" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(96, 416)
+
+[node name="Block7" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(160, 416)
+
+[node name="Block8" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(160, 96)
+
+[node name="Block9" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(160, 160)
+
+[node name="Block10" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(224, 160)
+
+[node name="Block11" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(352, 160)
+
+[node name="Block12" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(416, 160)
+
+[node name="Block13" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(416, 96)
+
+[node name="Block14" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(224, 416)
+
+[node name="Block15" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(288, 416)
+
+[node name="Block35" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(288, 352)
+
+[node name="Block16" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(352, 416)
+
+[node name="Block17" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(416, 416)
+
+[node name="Block18" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(480, 416)
+
+[node name="Block19" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(544, 416)
+
+[node name="Block20" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(608, 416)
+
+[node name="Block23" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(-32, 608)
+
+[node name="Block24" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(32, 608)
+
+[node name="Block25" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(96, 608)
+
+[node name="Block26" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(160, 608)
+
+[node name="Block27" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(224, 608)
+
+[node name="Block28" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(288, 608)
+
+[node name="Block29" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(352, 608)
+
+[node name="Block30" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(416, 608)
+
+[node name="Block31" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(480, 608)
+
+[node name="Block32" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(544, 608)
+
+[node name="Block33" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(608, 608)
+
+[node name="Block36" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(928, 608)
+
+[node name="Block37" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(992, 608)
+
+[node name="Block40" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(1120, 480)
+
+[node name="Block45" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(992, 352)
+
+[node name="Block44" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(1184, 480)
+
+[node name="Block46" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(1120, 224)
+
+[node name="Block47" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(1184, 224)
+
+[node name="Block21" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(608, 352)
+
+[node name="Block38" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(928, 416)
+
+[node name="Block39" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(928, 352)
+
+[node name="Block41" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(928, 224)
+
+[node name="Block42" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(928, 160)
+
+[node name="Block43" parent="Blocks" instance=ExtResource("1_xio8c")]
+position = Vector2(928, 288)
+
+[node name="Player" parent="." instance=ExtResource("2_gdwsm")]
+position = Vector2(-31, 120)
+
+[node name="SpaceBonus" parent="." instance=ExtResource("3_3tyme")]
+position = Vector2(-31, 608)
+
+[node name="SpaceBonus2" parent="." instance=ExtResource("3_3tyme")]
+position = Vector2(289, -32)
+
+[node name="UI" parent="." instance=ExtResource("4_qedso")]
+offset_left = -135.0
+offset_top = -80.0
+offset_right = 24.0
+offset_bottom = 32.0
+scale = Vector2(1.2, 1.2)
+metadata/_edit_lock_ = true

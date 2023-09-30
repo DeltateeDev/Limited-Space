@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs3hcefii4uq1"]
+
+[ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_51167"]
+[ext_resource type="PackedScene" uid="uid://8u45ceex3opq" path="res://Objects/block.tscn" id="1_k8km4"]
+[ext_resource type="PackedScene" uid="uid://b424m3t6mdj45" path="res://Objects/player.tscn" id="2_07aol"]
+[ext_resource type="PackedScene" uid="uid://ct7u8tpcp6xex" path="res://Objects/ui.tscn" id="3_xrfo5"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_51167")
+
+[node name="Blocks" type="Node2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="Block" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(160, 417)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(224, 417)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(288, 417)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(352, 417)
+
+[node name="Block5" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(352, 353)
+
+[node name="Block6" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(352, 289)
+
+[node name="Block7" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(576, 289)
+
+[node name="Block8" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(800, 289)
+
+[node name="Block9" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(800, 353)
+
+[node name="Block10" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(800, 417)
+
+[node name="Block11" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(864, 417)
+
+[node name="Block12" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(928, 417)
+
+[node name="Block13" parent="Blocks" instance=ExtResource("1_k8km4")]
+position = Vector2(992, 417)
+
+[node name="Player" parent="." instance=ExtResource("2_07aol")]
+position = Vector2(224, 312)
+
+[node name="UI" parent="." instance=ExtResource("3_xrfo5")]
+metadata/_edit_lock_ = true

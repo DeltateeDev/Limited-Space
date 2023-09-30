@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://j2phoaipe51b"]
+
+[ext_resource type="Script" path="res://Objects/level_2.gd" id="1_3j4fw"]
+[ext_resource type="PackedScene" uid="uid://8u45ceex3opq" path="res://Objects/block.tscn" id="1_q164v"]
+[ext_resource type="PackedScene" uid="uid://ct7u8tpcp6xex" path="res://Objects/ui.tscn" id="2_y7vfu"]
+[ext_resource type="PackedScene" uid="uid://b424m3t6mdj45" path="res://Objects/player.tscn" id="3_m4mfv"]
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_3j4fw")
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="Block" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(96, 416)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(160, 416)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(224, 416)
+
+[node name="Block5" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(352, 416)
+
+[node name="Block6" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(352, 352)
+
+[node name="Block7" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(416, 480)
+
+[node name="Block8" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(480, 480)
+
+[node name="Block9" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(544, 480)
+
+[node name="Block19" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(544, 288)
+
+[node name="Block10" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(608, 480)
+
+[node name="Block11" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(672, 480)
+
+[node name="Block12" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(736, 480)
+
+[node name="Block13" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(800, 416)
+
+[node name="Block14" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(800, 352)
+
+[node name="Block15" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(864, 352)
+
+[node name="Block16" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(928, 288)
+
+[node name="Block20" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(1056, 352)
+
+[node name="Block17" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(928, 352)
+
+[node name="Block18" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(992, 352)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("1_q164v")]
+position = Vector2(224, 352)
+
+[node name="Player" parent="." instance=ExtResource("3_m4mfv")]
+position = Vector2(128, 312)
+
+[node name="UI" parent="." instance=ExtResource("2_y7vfu")]
+metadata/_edit_lock_ = true

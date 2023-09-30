@@ -1,0 +1,291 @@
+[gd_scene load_steps=7 format=3 uid="uid://p8v8txjs81ee"]
+
+[ext_resource type="Script" path="res://Scripts/level_7.gd" id="1_k617b"]
+[ext_resource type="PackedScene" uid="uid://8u45ceex3opq" path="res://Objects/block.tscn" id="1_wr410"]
+[ext_resource type="PackedScene" uid="uid://6oulcrs1th07" path="res://Objects/space_bonus.tscn" id="2_gd3g0"]
+[ext_resource type="PackedScene" uid="uid://bpv27wm43cmwr" path="res://Objects/door.tscn" id="3_tsf6e"]
+[ext_resource type="PackedScene" uid="uid://b424m3t6mdj45" path="res://Objects/player.tscn" id="4_3kug7"]
+[ext_resource type="PackedScene" uid="uid://ct7u8tpcp6xex" path="res://Objects/ui.tscn" id="5_ckyrt"]
+
+[node name="Level7" type="Node2D"]
+script = ExtResource("1_k617b")
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="Block" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(96, 672)
+
+[node name="Block54" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(32, 672)
+
+[node name="Block72" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(-32, 672)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(160, 672)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(288, 608)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(352, 608)
+
+[node name="Block5" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(144, 464)
+
+[node name="Block60" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(-96, 416)
+
+[node name="Block78" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(-96, 352)
+
+[node name="Block6" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(288, 352)
+
+[node name="Block27" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(864, 96)
+
+[node name="Block28" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1184, 96)
+
+[node name="Block73" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1120, 96)
+
+[node name="Block74" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1056, 96)
+
+[node name="Block29" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1120, 288)
+
+[node name="Block30" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1056, 288)
+
+[node name="Block31" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(992, 288)
+
+[node name="Block32" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(928, 288)
+
+[node name="Block53" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(864, 288)
+
+[node name="Block35" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1120, 480)
+
+[node name="Block36" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1120, 480)
+
+[node name="Block33" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1056, 480)
+
+[node name="Block34" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(992, 480)
+
+[node name="Block39" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(864, 608)
+
+[node name="Block40" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(800, 608)
+
+[node name="Block52" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 440)
+
+[node name="Block77" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(672, 440)
+
+[node name="Block41" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1056, 672)
+
+[node name="Block42" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(992, 672)
+
+[node name="Block7" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(416, 352)
+
+[node name="Block8" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(480, 352)
+
+[node name="Block46" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(416, 160)
+
+[node name="Block47" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(480, 160)
+
+[node name="Block48" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(288, 160)
+
+[node name="Block49" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(352, 160)
+
+[node name="Block50" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(160, 160)
+
+[node name="Block56" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(96, 160)
+
+[node name="Block51" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(224, 160)
+
+[node name="Block55" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(224, 96)
+
+[node name="Block9" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 632)
+
+[node name="Block10" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 568)
+
+[node name="Block11" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 504)
+
+[node name="Block12" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 440)
+
+[node name="Block37" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1120, 416)
+
+[node name="Block38" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1120, 352)
+
+[node name="Block13" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 376)
+
+[node name="Block14" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 312)
+
+[node name="Block15" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 248)
+
+[node name="Block16" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 184)
+
+[node name="Block17" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 120)
+
+[node name="Block18" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 56)
+
+[node name="Block21" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1248, 96)
+
+[node name="Block22" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1248, 32)
+
+[node name="Block23" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1248, -32)
+
+[node name="Block76" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(1248, -96)
+
+[node name="Block24" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(800, 96)
+
+[node name="Block25" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(800, 32)
+
+[node name="Block26" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(800, -32)
+
+[node name="Block75" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(800, -96)
+
+[node name="Block19" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, -8)
+
+[node name="Block20" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, -72)
+
+[node name="Block43" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 824)
+
+[node name="Block44" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 760)
+
+[node name="Block45" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(544, 696)
+
+[node name="Block57" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 632)
+
+[node name="Block58" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 568)
+
+[node name="Block59" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 504)
+
+[node name="Block61" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 376)
+
+[node name="Block62" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 312)
+
+[node name="Block63" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 248)
+
+[node name="Block64" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 184)
+
+[node name="Block65" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 120)
+
+[node name="Block66" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 56)
+
+[node name="Block67" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, -8)
+
+[node name="Block68" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, -72)
+
+[node name="Block69" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 824)
+
+[node name="Block70" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 760)
+
+[node name="Block71" parent="Blocks" instance=ExtResource("1_wr410")]
+position = Vector2(608, 696)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 328)
+zoom = Vector2(0.8, 0.8)
+
+[node name="SpaceBonus" parent="." instance=ExtResource("2_gd3g0")]
+position = Vector2(672, 376)
+
+[node name="SpaceBonus3" parent="." instance=ExtResource("2_gd3g0")]
+position = Vector2(-96, 288)
+
+[node name="SpaceBonus2" parent="." instance=ExtResource("2_gd3g0")]
+position = Vector2(864, 32)
+
+[node name="Door" parent="." node_paths=PackedStringArray("destination") instance=ExtResource("3_tsf6e")]
+position = Vector2(448, 264)
+destination = NodePath("../Door4")
+
+[node name="Door2" parent="." node_paths=PackedStringArray("destination") instance=ExtResource("3_tsf6e")]
+position = Vector2(1024, 584)
+destination = NodePath("../Door5")
+
+[node name="Door3" parent="." node_paths=PackedStringArray("destination") instance=ExtResource("3_tsf6e")]
+position = Vector2(1024, 392)
+destination = NodePath("../Door")
+
+[node name="Door4" parent="." node_paths=PackedStringArray("destination") instance=ExtResource("3_tsf6e")]
+position = Vector2(1160, 8)
+destination = NodePath("../Door")
+
+[node name="Door5" parent="." node_paths=PackedStringArray("destination") instance=ExtResource("3_tsf6e")]
+position = Vector2(448, 72)
+destination = NodePath("../Door2")
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("4_3kug7")]
+position = Vector2(0, 568)
+
+[node name="UI" parent="." instance=ExtResource("5_ckyrt")]
+offset_left = -136.0
+offset_top = -72.0
+offset_right = -96.0
+offset_bottom = -32.0
+scale = Vector2(1.2, 1.2)
+metadata/_edit_lock_ = true

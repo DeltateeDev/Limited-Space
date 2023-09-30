@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpv27wm43cmwr"]
+
+[ext_resource type="PackedScene" uid="uid://d0rx1riyote3b" path="res://Objects/door_sprite.tscn" id="1_bhtju"]
+[ext_resource type="Script" path="res://Scripts/door.gd" id="1_g6gwh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04801"]
+size = Vector2(96, 16)
+
+[node name="Door" type="Area2D"]
+script = ExtResource("1_g6gwh")
+
+[node name="DoorSprite" parent="." instance=ExtResource("1_bhtju")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 56)
+shape = SubResource("RectangleShape2D_04801")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

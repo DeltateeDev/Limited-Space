@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpjmad7gw277g"]
+[gd_scene load_steps=7 format=3 uid="uid://bpjmad7gw277g"]
 
 [ext_resource type="PackedScene" uid="uid://8u45ceex3opq" path="res://Objects/block.tscn" id="1_b3hbc"]
+[ext_resource type="PackedScene" uid="uid://ct7u8tpcp6xex" path="res://Objects/ui.tscn" id="1_wkam1"]
 [ext_resource type="PackedScene" uid="uid://b424m3t6mdj45" path="res://Objects/player.tscn" id="2_40wbg"]
+[ext_resource type="PackedScene" uid="uid://6oulcrs1th07" path="res://Objects/space_bonus.tscn" id="3_isv7a"]
+[ext_resource type="PackedScene" uid="uid://bpv27wm43cmwr" path="res://Objects/door.tscn" id="5_o78k0"]
+[ext_resource type="Script" path="res://Scripts/LevelController.gd" id="6_838nv"]
 
 [node name="Testing Environment" type="Node2D"]
 
@@ -37,6 +41,21 @@ position = Vector2(992, 608)
 [node name="Block14" parent="Blocks" instance=ExtResource("1_b3hbc")]
 position = Vector2(1056, 608)
 
+[node name="Block17" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(800, 192)
+
+[node name="Block18" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(864, 192)
+
+[node name="Block19" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(928, 192)
+
+[node name="Block20" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(992, 192)
+
+[node name="Block21" parent="Blocks" instance=ExtResource("1_b3hbc")]
+position = Vector2(1056, 192)
+
 [node name="Block6" parent="Blocks" instance=ExtResource("1_b3hbc")]
 position = Vector2(352, 544)
 
@@ -55,5 +74,25 @@ position = Vector2(480, 480)
 [node name="Block9" parent="Blocks" instance=ExtResource("1_b3hbc")]
 position = Vector2(672, 480)
 
-[node name="Player" parent="." instance=ExtResource("2_40wbg")]
+[node name="Door" parent="." instance=ExtResource("5_o78k0")]
+position = Vector2(1024, 520)
+
+[node name="Door2" parent="." instance=ExtResource("5_o78k0")]
+position = Vector2(832, 104)
+
+[node name="SpaceBonus" parent="." instance=ExtResource("3_isv7a")]
+position = Vector2(576, 320)
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_40wbg")]
 position = Vector2(160, 488)
+
+[node name="UI" parent="." instance=ExtResource("1_wkam1")]
+metadata/_edit_lock_ = true
+
+[node name="LevelController" type="Node2D" parent="."]
+script = ExtResource("6_838nv")
+
+[connection signal="body_entered" from="Door" to="LevelController" method="_on_door_body_entered"]
+[connection signal="body_exited" from="Door" to="LevelController" method="_on_door_body_exited"]
+[connection signal="body_entered" from="Door2" to="LevelController" method="_on_door_2_body_entered"]
+[connection signal="body_exited" from="Door2" to="LevelController" method="_on_door_2_body_exited"]

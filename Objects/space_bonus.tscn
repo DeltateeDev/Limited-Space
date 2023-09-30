@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://6oulcrs1th07"]
+
+[ext_resource type="Texture2D" uid="uid://dihjf1gn3cvva" path="res://Graphics/bonus.png" id="1_ne100"]
+[ext_resource type="Script" path="res://Scripts/space_bonus.gd" id="1_o08y6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4aa0h"]
+radius = 24.0
+
+[node name="SpaceBonus" type="Area2D"]
+script = ExtResource("1_o08y6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ne100")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4aa0h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

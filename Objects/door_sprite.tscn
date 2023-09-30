@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0rx1riyote3b"]
+
+[ext_resource type="Texture2D" uid="uid://bk683vabc2b06" path="res://Graphics/door.png" id="1_2c5wn"]
+
+[node name="DoorSprite" type="Sprite2D"]
+texture = ExtResource("1_2c5wn")
