@@ -1,16 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://p8v8txjs81ee"]
+[gd_scene load_steps=11 format=3 uid="uid://p8v8txjs81ee"]
 
 [ext_resource type="Script" path="res://Scripts/level_7.gd" id="1_k617b"]
 [ext_resource type="PackedScene" uid="uid://8u45ceex3opq" path="res://Objects/block.tscn" id="1_wr410"]
 [ext_resource type="PackedScene" uid="uid://6oulcrs1th07" path="res://Objects/space_bonus.tscn" id="2_gd3g0"]
+[ext_resource type="PackedScene" uid="uid://cvgqxvr3c8qjd" path="res://Objects/background.tscn" id="2_sy1rm"]
 [ext_resource type="PackedScene" uid="uid://bpv27wm43cmwr" path="res://Objects/door.tscn" id="3_tsf6e"]
 [ext_resource type="PackedScene" uid="uid://b424m3t6mdj45" path="res://Objects/player.tscn" id="4_3kug7"]
 [ext_resource type="PackedScene" uid="uid://ct7u8tpcp6xex" path="res://Objects/ui.tscn" id="5_ckyrt"]
+[ext_resource type="PackedScene" uid="uid://bh2ht6p8mwsqb" path="res://Objects/flag.tscn" id="8_jq3x8"]
+[ext_resource type="PackedScene" uid="uid://kevyiwyfoflr" path="res://Objects/transition.tscn" id="9_8omdl"]
+[ext_resource type="PackedScene" uid="uid://cw6wtn3lu5sxh" path="res://Objects/killbrick.tscn" id="10_v0vm1"]
 
 [node name="Level7" type="Node2D"]
 script = ExtResource("1_k617b")
 
+[node name="Background" parent="." instance=ExtResource("2_sy1rm")]
+modulate = Color(0.392157, 0, 0, 1)
+
 [node name="Blocks" type="Node2D" parent="."]
+modulate = Color(0.678431, 0, 0, 1)
 
 [node name="Block" parent="Blocks" instance=ExtResource("1_wr410")]
 position = Vector2(96, 672)
@@ -88,10 +96,10 @@ position = Vector2(864, 608)
 position = Vector2(800, 608)
 
 [node name="Block52" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 440)
+position = Vector2(608, 427)
 
 [node name="Block77" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(672, 440)
+position = Vector2(672, 427)
 
 [node name="Block41" parent="Blocks" instance=ExtResource("1_wr410")]
 position = Vector2(1056, 672)
@@ -130,16 +138,16 @@ position = Vector2(224, 160)
 position = Vector2(224, 96)
 
 [node name="Block9" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 632)
+position = Vector2(544, 619)
 
 [node name="Block10" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 568)
+position = Vector2(544, 555)
 
 [node name="Block11" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 504)
+position = Vector2(544, 491)
 
 [node name="Block12" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 440)
+position = Vector2(544, 427)
 
 [node name="Block37" parent="Blocks" instance=ExtResource("1_wr410")]
 position = Vector2(1120, 416)
@@ -148,22 +156,22 @@ position = Vector2(1120, 416)
 position = Vector2(1120, 352)
 
 [node name="Block13" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 376)
+position = Vector2(544, 363)
 
 [node name="Block14" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 312)
+position = Vector2(544, 299)
 
 [node name="Block15" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 248)
+position = Vector2(544, 235)
 
 [node name="Block16" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 184)
+position = Vector2(544, 171)
 
 [node name="Block17" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 120)
+position = Vector2(544, 107)
 
 [node name="Block18" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 56)
+position = Vector2(544, 43)
 
 [node name="Block21" parent="Blocks" instance=ExtResource("1_wr410")]
 position = Vector2(1248, 96)
@@ -190,68 +198,68 @@ position = Vector2(800, -32)
 position = Vector2(800, -96)
 
 [node name="Block19" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, -8)
+position = Vector2(544, -21)
 
 [node name="Block20" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, -72)
+position = Vector2(544, -85)
 
 [node name="Block43" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 824)
+position = Vector2(544, 811)
 
 [node name="Block44" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 760)
+position = Vector2(544, 747)
 
 [node name="Block45" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(544, 696)
+position = Vector2(544, 683)
 
 [node name="Block57" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 632)
+position = Vector2(608, 619)
 
 [node name="Block58" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 568)
+position = Vector2(608, 555)
 
 [node name="Block59" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 504)
+position = Vector2(608, 491)
 
 [node name="Block61" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 376)
+position = Vector2(608, 363)
 
 [node name="Block62" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 312)
+position = Vector2(608, 299)
 
 [node name="Block63" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 248)
+position = Vector2(608, 235)
 
 [node name="Block64" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 184)
+position = Vector2(608, 171)
 
 [node name="Block65" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 120)
+position = Vector2(608, 107)
 
 [node name="Block66" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 56)
+position = Vector2(608, 43)
 
 [node name="Block67" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, -8)
+position = Vector2(608, -21)
 
 [node name="Block68" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, -72)
+position = Vector2(608, -85)
 
 [node name="Block69" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 824)
+position = Vector2(608, 811)
 
 [node name="Block70" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 760)
+position = Vector2(608, 747)
 
 [node name="Block71" parent="Blocks" instance=ExtResource("1_wr410")]
-position = Vector2(608, 696)
+position = Vector2(608, 683)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 328)
 zoom = Vector2(0.8, 0.8)
 
 [node name="SpaceBonus" parent="." instance=ExtResource("2_gd3g0")]
-position = Vector2(672, 376)
+position = Vector2(672, 360)
 
 [node name="SpaceBonus3" parent="." instance=ExtResource("2_gd3g0")]
 position = Vector2(-96, 288)
@@ -289,3 +297,22 @@ offset_right = -96.0
 offset_bottom = -32.0
 scale = Vector2(1.2, 1.2)
 metadata/_edit_lock_ = true
+
+[node name="Flag" parent="." instance=ExtResource("8_jq3x8")]
+position = Vector2(96, 99)
+next_level = "res://Objects/endgame.tscn"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -144.0
+offset_top = -80.0
+offset_right = 1296.0
+offset_bottom = 736.0
+
+[node name="Transition" parent="Control" instance=ExtResource("9_8omdl")]
+layout_mode = 1
+
+[node name="Killbrick" parent="." instance=ExtResource("10_v0vm1")]
+position = Vector2(-16, 784)
+level = "res://Levels/level_7.tscn"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkph2ms5lpixi"]
+
+[ext_resource type="AudioStream" uid="uid://cgnxbsvuknbbv" path="res://Sound/Limited Time.mp3" id="1_d16yn"]
+[ext_resource type="AudioStream" uid="uid://02p2thqkig0x" path="res://Sound/Victory.mp3" id="2_a5gpk"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_d16yn")
+autoplay = true
+
+[node name="VictorySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_a5gpk")

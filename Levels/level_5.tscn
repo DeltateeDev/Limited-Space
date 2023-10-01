@@ -1,15 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1qq45etlrsur"]
+[gd_scene load_steps=10 format=3 uid="uid://b1qq45etlrsur"]
 
 [ext_resource type="PackedScene" uid="uid://8u45ceex3opq" path="res://Objects/block.tscn" id="1_5et6c"]
 [ext_resource type="Script" path="res://Scripts/level_5.gd" id="1_68n7u"]
 [ext_resource type="PackedScene" uid="uid://6oulcrs1th07" path="res://Objects/space_bonus.tscn" id="2_evwru"]
+[ext_resource type="PackedScene" uid="uid://cvgqxvr3c8qjd" path="res://Objects/background.tscn" id="2_tq678"]
 [ext_resource type="PackedScene" uid="uid://b424m3t6mdj45" path="res://Objects/player.tscn" id="3_wpm1j"]
 [ext_resource type="PackedScene" uid="uid://ct7u8tpcp6xex" path="res://Objects/ui.tscn" id="4_4kwxb"]
+[ext_resource type="PackedScene" uid="uid://bh2ht6p8mwsqb" path="res://Objects/flag.tscn" id="7_p6ig7"]
+[ext_resource type="PackedScene" uid="uid://kevyiwyfoflr" path="res://Objects/transition.tscn" id="8_21u0h"]
+[ext_resource type="PackedScene" uid="uid://cw6wtn3lu5sxh" path="res://Objects/killbrick.tscn" id="9_njm6c"]
 
 [node name="Level5" type="Node2D"]
 script = ExtResource("1_68n7u")
 
+[node name="Background" parent="." instance=ExtResource("2_tq678")]
+modulate = Color(0.286275, 0.286275, 0, 1)
+
 [node name="Blocks" type="Node2D" parent="."]
+modulate = Color(1, 1, 0, 1)
 
 [node name="Block" parent="Blocks" instance=ExtResource("1_5et6c")]
 position = Vector2(64, 256)
@@ -71,6 +79,12 @@ position = Vector2(832, 384)
 [node name="Block17" parent="Blocks" instance=ExtResource("1_5et6c")]
 position = Vector2(896, 384)
 
+[node name="Block22" parent="Blocks" instance=ExtResource("1_5et6c")]
+position = Vector2(896, 448)
+
+[node name="Block23" parent="Blocks" instance=ExtResource("1_5et6c")]
+position = Vector2(1088, 448)
+
 [node name="SpaceBonus" parent="." instance=ExtResource("2_evwru")]
 position = Vector2(832, 320)
 
@@ -80,8 +94,25 @@ position = Vector2(960, 384)
 [node name="SpaceBonus3" parent="." instance=ExtResource("2_evwru")]
 position = Vector2(1024, 384)
 
-[node name="Player" parent="." instance=ExtResource("3_wpm1j")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("3_wpm1j")]
 position = Vector2(192, 232)
 
 [node name="UI" parent="." instance=ExtResource("4_4kwxb")]
 metadata/_edit_lock_ = true
+
+[node name="Flag" parent="." instance=ExtResource("7_p6ig7")]
+position = Vector2(66, 194)
+next_level = "res://Levels/level_6.tscn"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Transition" parent="Control" instance=ExtResource("8_21u0h")]
+layout_mode = 1
+
+[node name="Killbrick" parent="." instance=ExtResource("9_njm6c")]
+position = Vector2(-40, 696)
+level = "res://Levels/level_5.tscn"

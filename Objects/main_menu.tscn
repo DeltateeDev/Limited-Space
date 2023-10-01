@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://yw0hfetqly11"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_tnftv"]
+[ext_resource type="Texture2D" uid="uid://bfkd5nlebt3m0" path="res://Graphics/MenuBackground.png" id="1_u4u1o"]
+[ext_resource type="Texture2D" uid="uid://ruy7qfqt0mfc" path="res://Graphics/Title.png" id="2_xj6lw"]
+[ext_resource type="Texture2D" uid="uid://dgy4korera63b" path="res://Graphics/Start.png" id="3_h6hid"]
+[ext_resource type="PackedScene" uid="uid://kevyiwyfoflr" path="res://Objects/transition.tscn" id="5_av4k7"]
+
+[sub_resource type="Animation" id="Animation_5amxn"]
+resource_name = "Menu"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(576, 152), Vector2(576, 139), Vector2(576, 152)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Start:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(576, 560), Vector2(576, 547), Vector2(576, 560)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h66af"]
+_data = {
+"Menu": SubResource("Animation_5amxn")
+}
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_tnftv")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_u4u1o")
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(576, 152)
+texture = ExtResource("2_xj6lw")
+
+[node name="Start" type="Sprite2D" parent="."]
+position = Vector2(576, 560)
+texture = ExtResource("3_h6hid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h66af")
+}
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Transition" parent="Control" instance=ExtResource("5_av4k7")]
+layout_mode = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

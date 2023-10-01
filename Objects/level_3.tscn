@@ -1,15 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1ey4ud2k1nwx"]
+[gd_scene load_steps=10 format=3 uid="uid://c1ey4ud2k1nwx"]
 
 [ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_6y1d1"]
 [ext_resource type="PackedScene" uid="uid://8u45ceex3opq" path="res://Objects/block.tscn" id="1_ebsvk"]
 [ext_resource type="PackedScene" uid="uid://b424m3t6mdj45" path="res://Objects/player.tscn" id="2_e1mtn"]
+[ext_resource type="PackedScene" uid="uid://cvgqxvr3c8qjd" path="res://Objects/background.tscn" id="2_i45j6"]
 [ext_resource type="PackedScene" uid="uid://ct7u8tpcp6xex" path="res://Objects/ui.tscn" id="3_0bg5s"]
 [ext_resource type="PackedScene" uid="uid://bpv27wm43cmwr" path="res://Objects/door.tscn" id="4_3x3c5"]
+[ext_resource type="PackedScene" uid="uid://bh2ht6p8mwsqb" path="res://Objects/flag.tscn" id="7_0yxpk"]
+[ext_resource type="PackedScene" uid="uid://kevyiwyfoflr" path="res://Objects/transition.tscn" id="8_bwy6a"]
+[ext_resource type="PackedScene" uid="uid://cw6wtn3lu5sxh" path="res://Objects/killbrick.tscn" id="9_kicb6"]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_6y1d1")
 
+[node name="Background" parent="." instance=ExtResource("2_i45j6")]
+modulate = Color(0.32549, 0.117647, 0.0156863, 1)
+
 [node name="Blocks" type="Node2D" parent="."]
+modulate = Color(0.956863, 0.427451, 0, 1)
 
 [node name="Block" parent="Blocks" instance=ExtResource("1_ebsvk")]
 position = Vector2(96, 544)
@@ -227,4 +235,31 @@ destination = NodePath("../Door")
 position = Vector2(192, 440)
 
 [node name="UI" parent="." instance=ExtResource("3_0bg5s")]
-metadata/_edit_lock_ = true
+offset_left = -64.0
+offset_top = -40.0
+offset_right = -24.0
+offset_bottom = 0.0
+scale = Vector2(1.1, 1.1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 320)
+zoom = Vector2(0.9, 0.9)
+
+[node name="Flag" parent="." instance=ExtResource("7_0yxpk")]
+position = Vector2(996, 482)
+next_level = "res://Levels/level_4.tscn"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -64.0
+offset_top = -40.0
+offset_right = 1216.0
+offset_bottom = 680.0
+
+[node name="Transition" parent="Control" instance=ExtResource("8_bwy6a")]
+layout_mode = 1
+
+[node name="Killbrick" parent="." instance=ExtResource("9_kicb6")]
+position = Vector2(-104, 720)
+level = "res://Objects/level_3.tscn"

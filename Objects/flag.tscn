@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bh2ht6p8mwsqb"]
+
+[ext_resource type="Script" path="res://Scripts/flag.gd" id="1_243x1"]
+[ext_resource type="Texture2D" uid="uid://clcq161n8c0v2" path="res://Graphics/flag.png" id="1_kvlm8"]
+[ext_resource type="PackedScene" uid="uid://b7hm73cx63xbv" path="res://Objects/flagParticles.tscn" id="2_sfh0x"]
+[ext_resource type="AudioStream" uid="uid://02p2thqkig0x" path="res://Sound/Victory.mp3" id="4_2bnrv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4fxd"]
+size = Vector2(25, 52)
+
+[node name="Flag" type="Area2D"]
+script = ExtResource("1_243x1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kvlm8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_w4fxd")
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("2_sfh0x")]
+position = Vector2(0.185, -5.46)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="VictorySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_2bnrv")
+volume_db = 10.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

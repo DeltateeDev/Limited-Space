@@ -1,0 +1,300 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvgqxvr3c8qjd"]
+
+[ext_resource type="PackedScene" uid="uid://bbfrw0pxebq2g" path="res://Objects/background_tile_1.tscn" id="1_7vo6k"]
+[ext_resource type="Texture2D" uid="uid://c7qhk02fumhuh" path="res://Graphics/back.png" id="1_gdeg6"]
+[ext_resource type="PackedScene" uid="uid://bobu1knd76osx" path="res://Objects/background_tile_2.tscn" id="2_imw0w"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+position = Vector2(578.5, 290.5)
+scale = Vector2(12.02, 8.07333)
+texture = ExtResource("1_gdeg6")
+
+[node name="BackgroundTile1" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(-72, -72)
+
+[node name="BackgroundTile20" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1224, 72)
+
+[node name="BackgroundTile2" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(72, -72)
+
+[node name="BackgroundTile3" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(216, -72)
+
+[node name="BackgroundTile4" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(360.075, -71.9247)
+
+[node name="BackgroundTile5" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(504.075, -71.9247)
+
+[node name="BackgroundTile6" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(648.075, -71.9247)
+
+[node name="BackgroundTile7" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(792.075, -71.9247)
+
+[node name="BackgroundTile8" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(936.15, -71.8495)
+
+[node name="BackgroundTile10" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1224, -72)
+
+[node name="BackgroundTile9" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1080.15, -71.8495)
+
+[node name="BackgroundTile71" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(-71.9247, 792.075)
+
+[node name="BackgroundTile72" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(72.0753, 792.075)
+
+[node name="BackgroundTile73" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(216.075, 792.075)
+
+[node name="BackgroundTile74" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(360.151, 792.15)
+
+[node name="BackgroundTile75" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(504.151, 792.15)
+
+[node name="BackgroundTile76" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(648.15, 792.15)
+
+[node name="BackgroundTile77" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(792.15, 792.15)
+
+[node name="BackgroundTile78" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(936.226, 792.226)
+
+[node name="BackgroundTile79" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1224.08, 792.075)
+
+[node name="BackgroundTile80" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1080.23, 792.226)
+
+[node name="BackgroundTile11" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(-71.9247, 72.0753)
+
+[node name="BackgroundTile12" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(72.0753, 72.0753)
+
+[node name="BackgroundTile13" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(216.151, 72.1505)
+
+[node name="BackgroundTile14" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(360.151, 72.1505)
+
+[node name="BackgroundTile15" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(504.15, 72.1505)
+
+[node name="BackgroundTile16" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(648.15, 72.1505)
+
+[node name="BackgroundTile17" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(792.226, 72.2258)
+
+[node name="BackgroundTile18" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1080.08, 72.0752)
+
+[node name="BackgroundTile19" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(936.226, 72.2258)
+
+[node name="BackgroundTile21" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(-71.9247, 216.075)
+
+[node name="BackgroundTile22" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1224.08, 360.075)
+
+[node name="BackgroundTile23" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(72.0753, 216.075)
+
+[node name="BackgroundTile24" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(216.075, 216.075)
+
+[node name="BackgroundTile25" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(360.151, 216.15)
+
+[node name="BackgroundTile26" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(504.151, 216.15)
+
+[node name="BackgroundTile27" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(648.15, 216.15)
+
+[node name="BackgroundTile28" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(792.15, 216.15)
+
+[node name="BackgroundTile29" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(936.226, 216.226)
+
+[node name="BackgroundTile30" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1224.08, 216.075)
+
+[node name="BackgroundTile31" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1080.23, 216.226)
+
+[node name="BackgroundTile32" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(-71.8495, 360.151)
+
+[node name="BackgroundTile33" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(72.1505, 360.151)
+
+[node name="BackgroundTile34" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(216.226, 360.226)
+
+[node name="BackgroundTile35" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(360.226, 360.226)
+
+[node name="BackgroundTile36" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(504.226, 360.226)
+
+[node name="BackgroundTile37" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(648.226, 360.226)
+
+[node name="BackgroundTile38" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(792.301, 360.301)
+
+[node name="BackgroundTile39" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1080.15, 360.15)
+
+[node name="BackgroundTile40" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(936.301, 360.301)
+
+[node name="BackgroundTile41" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(-71.9247, 504.075)
+
+[node name="BackgroundTile42" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1224.08, 648.075)
+
+[node name="BackgroundTile43" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(72.0753, 504.075)
+
+[node name="BackgroundTile44" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(216.075, 504.075)
+
+[node name="BackgroundTile45" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(360.151, 504.151)
+
+[node name="BackgroundTile46" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(504.151, 504.151)
+
+[node name="BackgroundTile47" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(648.15, 504.151)
+
+[node name="BackgroundTile48" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(792.15, 504.151)
+
+[node name="BackgroundTile49" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(936.226, 504.226)
+
+[node name="BackgroundTile50" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1224.08, 504.075)
+
+[node name="BackgroundTile51" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1080.23, 504.226)
+
+[node name="BackgroundTile52" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(-71.8495, 648.151)
+
+[node name="BackgroundTile53" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(72.1505, 648.151)
+
+[node name="BackgroundTile54" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(216.226, 648.226)
+
+[node name="BackgroundTile55" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(360.226, 648.226)
+
+[node name="BackgroundTile56" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(504.226, 648.226)
+
+[node name="BackgroundTile57" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(648.226, 648.226)
+
+[node name="BackgroundTile58" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(792.301, 648.301)
+
+[node name="BackgroundTile59" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1080.15, 648.151)
+
+[node name="BackgroundTile60" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(936.301, 648.301)
+
+[node name="BackgroundTile61" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1224, -215.925)
+
+[node name="BackgroundTile89" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(-215.924, 71.9999)
+
+[node name="BackgroundTile90" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(-215.924, -72.0001)
+
+[node name="BackgroundTile91" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(-215.849, 792.075)
+
+[node name="BackgroundTile92" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(-215.849, 360.075)
+
+[node name="BackgroundTile93" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(-215.849, 216.075)
+
+[node name="BackgroundTile94" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(-215.849, 648.075)
+
+[node name="BackgroundTile95" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(-215.849, 504.075)
+
+[node name="BackgroundTile96" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(-215.925, -215.925)
+
+[node name="BackgroundTile62" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(-71.9247, -215.849)
+
+[node name="BackgroundTile63" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(72.0753, -215.849)
+
+[node name="BackgroundTile64" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(216.151, -215.774)
+
+[node name="BackgroundTile65" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(360.151, -215.774)
+
+[node name="BackgroundTile66" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(504.15, -215.774)
+
+[node name="BackgroundTile67" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(648.15, -215.774)
+
+[node name="BackgroundTile68" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(792.226, -215.699)
+
+[node name="BackgroundTile69" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1080.08, -215.849)
+
+[node name="BackgroundTile81" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1368.15, -71.9248)
+
+[node name="BackgroundTile82" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1368.23, 792.15)
+
+[node name="BackgroundTile83" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1368.08, 71.9999)
+
+[node name="BackgroundTile84" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1368.23, 216.15)
+
+[node name="BackgroundTile85" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1368.15, 360.075)
+
+[node name="BackgroundTile86" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(1368.23, 504.15)
+
+[node name="BackgroundTile87" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1368.15, 648.075)
+
+[node name="BackgroundTile88" parent="." instance=ExtResource("2_imw0w")]
+position = Vector2(1368.08, -215.925)
+
+[node name="BackgroundTile70" parent="." instance=ExtResource("1_7vo6k")]
+position = Vector2(936.226, -215.699)

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw6wtn3lu5sxh"]
+
+[ext_resource type="Script" path="res://Scripts/Killbrick.gd" id="1_hxgas"]
+[ext_resource type="Texture2D" uid="uid://cte8howcpf1j4" path="res://Graphics/block.png" id="2_x8kys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48u2w"]
+size = Vector2(2045, 64)
+
+[node name="Killbrick" type="Area2D"]
+script = ExtResource("1_hxgas")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.501961, 0, 0, 1)
+position = Vector2(621.5, 0)
+scale = Vector2(23.7344, 1)
+texture = ExtResource("2_x8kys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(619.5, 0)
+shape = SubResource("RectangleShape2D_48u2w")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

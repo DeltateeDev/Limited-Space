@@ -1,19 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://cv0dru7sro6i3"]
+[gd_scene load_steps=10 format=3 uid="uid://cv0dru7sro6i3"]
 
 [ext_resource type="PackedScene" uid="uid://8u45ceex3opq" path="res://Objects/block.tscn" id="1_04tp8"]
 [ext_resource type="Script" path="res://Scripts/level_4.gd" id="1_w8dom"]
 [ext_resource type="PackedScene" uid="uid://bpv27wm43cmwr" path="res://Objects/door.tscn" id="2_2ithp"]
+[ext_resource type="PackedScene" uid="uid://cvgqxvr3c8qjd" path="res://Objects/background.tscn" id="2_erfo6"]
 [ext_resource type="PackedScene" uid="uid://b424m3t6mdj45" path="res://Objects/player.tscn" id="3_ie1ba"]
 [ext_resource type="PackedScene" uid="uid://ct7u8tpcp6xex" path="res://Objects/ui.tscn" id="4_o1pkp"]
+[ext_resource type="PackedScene" uid="uid://bh2ht6p8mwsqb" path="res://Objects/flag.tscn" id="7_e5k2m"]
+[ext_resource type="PackedScene" uid="uid://kevyiwyfoflr" path="res://Objects/transition.tscn" id="8_sa36t"]
+[ext_resource type="PackedScene" uid="uid://cw6wtn3lu5sxh" path="res://Objects/killbrick.tscn" id="9_odv3f"]
 
 [node name="Level4" type="Node2D"]
 script = ExtResource("1_w8dom")
+
+[node name="Background" parent="." instance=ExtResource("2_erfo6")]
+modulate = Color(0, 0.337255, 0.0509804, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 320)
 zoom = Vector2(0.8, 0.8)
 
 [node name="Blocks" type="Node2D" parent="."]
+modulate = Color(0, 0.823529, 0, 1)
 position = Vector2(-96, 0)
 
 [node name="Block" parent="Blocks" instance=ExtResource("1_04tp8")]
@@ -178,3 +186,22 @@ offset_right = 17.0
 offset_bottom = 27.0
 scale = Vector2(1.2, 1.2)
 metadata/_edit_lock_ = true
+
+[node name="Flag" parent="." instance=ExtResource("7_e5k2m")]
+position = Vector2(1090, 419)
+next_level = "res://Levels/level_5.tscn"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -144.0
+offset_top = -88.0
+offset_right = 1296.0
+offset_bottom = 728.0
+
+[node name="Transition" parent="Control" instance=ExtResource("8_sa36t")]
+layout_mode = 1
+
+[node name="Killbrick" parent="." instance=ExtResource("9_odv3f")]
+position = Vector2(-96, 768)
+level = "res://Levels/level_4.tscn"

@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bobu1knd76osx"]
+
+[ext_resource type="Texture2D" uid="uid://b4jldl4vx07ky" path="res://Graphics/Tile2.png" id="1_5rjgi"]
+[ext_resource type="Script" path="res://Scripts/background_tile_2.gd" id="2_0qls3"]
+
+[sub_resource type="Animation" id="Animation_rkv6g"]
+resource_name = "rotate"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(2, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.5708, 1.48353, 1.5708]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7dav5"]
+_data = {
+"rotate": SubResource("Animation_rkv6g")
+}
+
+[node name="BackgroundTile2" type="Sprite2D"]
+rotation = 1.5708
+scale = Vector2(0.961, 0.961)
+texture = ExtResource("1_5rjgi")
+script = ExtResource("2_0qls3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7dav5")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="firstSecond" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout" flags=18]
+[connection signal="timeout" from="firstSecond" to="." method="_on_first_second_timeout"]

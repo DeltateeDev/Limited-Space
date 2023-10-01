@@ -1,0 +1,25 @@
+res://Levels/level_4.tscn::74e3cccab7fb77acb94fd930bc68c81e::1696183937::res://.godot/exported/133200997/export-4e3b299600bd6c715040ff702b0cd8dc-level_4.scn
+res://Levels/level_5.tscn::dbf4aae84f47279c562f6bc2f1be0df7::1696183937::res://.godot/exported/133200997/export-6b936dfeee4e6a934269a5297bb402d0-level_5.scn
+res://Levels/level_6.tscn::abd5cd379c9477b3d3cb3617f0f6d010::1696183937::res://.godot/exported/133200997/export-e317bcb0b3d3477af115fd3739e9ba9a-level_6.scn
+res://Levels/level_7.tscn::e27a3b4d281a7b58e9e70a33ce1683c1::1696183937::res://.godot/exported/133200997/export-78a4f4917481f2128ae2422e8c40cb1c-level_7.scn
+res://Levels/testing_environment.tscn::24d14f59b2246a7ffeec7248a10d3c43::1696183937::res://.godot/exported/133200997/export-7ee36b0b6fa7fe62b4f37e910913d5f8-testing_environment.scn
+res://Objects/background.tscn::0ca037fbb5a4dd6c6f64e56c802b18ac::1696183937::res://.godot/exported/133200997/export-e7e3978baedbf7aac516399998167ac0-background.scn
+res://Objects/background_tile_1.tscn::e94ada798170bc8d62a1d926847186f8::1696162555::res://.godot/exported/133200997/export-33f9b043f1380b2d6c39946ad9eaefda-background_tile_1.scn
+res://Objects/background_tile_2.tscn::7e58bf2dd9b770d50b9c5f5280d3421a::1696162555::res://.godot/exported/133200997/export-81d2704fa18e6f02d18fc055c6a699aa-background_tile_2.scn
+res://Objects/block.tscn::454651237d49d0bea44bbf468d769819::1696183937::res://.godot/exported/133200997/export-226f5a70b0045c82f17fac1dda6143b9-block.scn
+res://Objects/door.tscn::d64ec13e1698043ec92e1109f3d146df::1696157189::res://.godot/exported/133200997/export-7cb7e9b3bfff5bd127ff45f0b75459ae-door.scn
+res://Objects/door_sprite.tscn::527a6fbd85145c054b7fdf0b3673ff79::1696081408::res://.godot/exported/133200997/export-64e8a899728e99efb349e7bc3609100f-door_sprite.scn
+res://Objects/flag.tscn::f03c39afa3c7b607419651e172edc780::1696183937::res://.godot/exported/133200997/export-e7e1a59823f87a809fe2afb0fda82725-flag.scn
+res://Objects/flagParticles.tscn::a5f2f9893ef38ea7cecb0d1949828a37::1696183937::res://.godot/exported/133200997/export-5de700353914e23e6e2ad5aa7b59c54b-flagParticles.scn
+res://Objects/killbrick.tscn::dadbbd7041b02aaeb33c2fdded9e7fca::1696183937::res://.godot/exported/133200997/export-66f7c4d215080c4832a9fdf9b85e0355-killbrick.scn
+res://Objects/level_1.tscn::0808c3a9dffe55efba6c19ff5479c1cd::1696183937::res://.godot/exported/133200997/export-162cb1a7a2e2e70c3e1003378296d0a8-level_1.scn
+res://Objects/level_2.tscn::03eb52226f3e614c9150acb1da164c8f::1696183937::res://.godot/exported/133200997/export-156617b3aa77f49d232a3123b0a75ade-level_2.scn
+res://Objects/level_3.tscn::8b9cec9716fa88858839984a9e9aba5b::1696183937::res://.godot/exported/133200997/export-6b55f7945af060a92aaee9a38258980c-level_3.scn
+res://Objects/movement_patricles.tscn::91cba0b0c8baddbb8b5db4d09f35ff64::1696162556::res://.godot/exported/133200997/export-7204425777c5702595da686d9fa619a8-movement_patricles.scn
+res://Objects/player.tscn::911f787f66807d05a903296c40c49133::1696183937::res://.godot/exported/133200997/export-a66a87271d7fcac44abc280f5d6a1505-player.scn
+res://Objects/Background Music.tscn::6fa1ba92d81d2978e42b62d33a6699bb::1696183937::res://.godot/exported/133200997/export-67454f19bb41551751835e109231e50f-Background Music.scn
+res://Objects/main_menu.tscn::2817c7d14fd787f46be638dac2d4c0b8::1696183937::res://.godot/exported/133200997/export-a5bcbd12c680bd9cdddb4530e4988e9a-main_menu.scn
+res://Objects/endgame.tscn::47714545ae52c2ed60af2810208469bf::1696183937::res://.godot/exported/133200997/export-23f534812bb10d58ade8111c4691488f-endgame.scn
+res://Objects/space_bonus.tscn::d10c09e1f8766c2ebd6dac7767499a1c::1696183937::res://.godot/exported/133200997/export-4e3a9ca08aab2568bf961b8310967bd2-space_bonus.scn
+res://Objects/transition.tscn::24cd64af2e39890caa5b37ad042a0b87::1696183937::res://.godot/exported/133200997/export-ba7af2aacf810a697aad79336c338f94-transition.scn
+res://Objects/ui.tscn::3fd33fd1c8488a44a8b516d282447ca9::1696157189::res://.godot/exported/133200997/export-8bf796ada6bddd0c6a4829cd7028e9dc-ui.scn

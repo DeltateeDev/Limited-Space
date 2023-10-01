@@ -10,9 +10,12 @@ const UP_DIRECTION = Vector2.UP
 var jump_buffered: bool = false
 var jump_available: bool = false
 var interaction_available: bool = false
+var current_direction := "RIGHT"
 
 func _ready() -> void:
 	interaction_available = false
+	$PlayerSprite.scale.y = 1
+	$PlayerSprite.flip_h = true
 
 func _process(delta: float) -> void:
 	if !interaction_available:
@@ -43,9 +46,11 @@ func _physics_process(delta: float) -> void:
 		jump_available = false
 		
 	if Globals.spaces_available < 1 && Input.is_action_just_pressed("SPACE"):
-		ErrorAnimation()
+		ErrorAnimation(is_falling)
 		
 	if Input.is_action_just_pressed("SPACE") && jump_available && !interaction_available:
+		$AnimationJump.play("jump")
+		$JumpSound.play()
 		velocity.y = -jump_strength
 		jump_available = false
 		Globals.spaces_available -= 1
@@ -58,9 +63,13 @@ func _physics_process(delta: float) -> void:
 	if is_moving && !$AnimationPlayer.is_playing():
 		$AnimationPlayer.play("moving")
 		
-	if !is_moving:
+	if !is_moving && !$AnimationJump.is_playing():
 		$PlayerSprite.scale.x = 1
 		$PlayerSprite.skew = 0
+	if is_moving:
+		$MovementPatricles.emitting = true
+	else:
+		$MovementPatricles.emitting = false
 	
 	if Input.is_action_pressed("LEFT"):
 		$PlayerSprite.skew = 0.07
@@ -68,11 +77,20 @@ func _physics_process(delta: float) -> void:
 		$PlayerSprite.skew = -0.07
 		
 	if Input.is_action_just_pressed("LEFT"):
-		$AnimationTurn.stop()
-		$AnimationTurn.play("turnleft")
+		if current_direction != "LEFT":
+			current_direction = "LEFT"
+			$AnimationTurn.stop()
+			$AnimationTurn.play("turnleft")
 	elif Input.is_action_just_pressed("RIGHT"):
-		$AnimationTurn.stop()
-		$AnimationTurn.play("turnright")
+		if current_direction != "RIGHT":
+			current_direction = "RIGHT"
+			$AnimationTurn.stop()
+			$AnimationTurn.play("turnright")
+			
+	if current_direction == "LEFT":
+		$MovementPatricles.position = $MarkerRight.position
+	elif current_direction == "RIGHT":
+		$MovementPatricles.position = $MarkerLeft.position
 
 	move_and_slide()
 
@@ -82,6 +100,8 @@ func _on_jump_timer_timeout() -> void:
 func _on_jump_availability_timeout() -> void:
 	jump_available = false
 
-func ErrorAnimation() -> void:
+func ErrorAnimation(is_falling) -> void:
 	emit_signal("nospaces")
-	velocity.y = -75
+	$ErrorSound.play()
+	if !is_falling:
+		velocity.y = -75

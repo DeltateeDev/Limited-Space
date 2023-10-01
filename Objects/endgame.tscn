@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://vypvvh332odk"]
+
+[ext_resource type="Texture2D" uid="uid://d4dfivamu1r0o" path="res://Graphics/EndScreen.png" id="1_30ri7"]
+[ext_resource type="Script" path="res://Objects/endgame.gd" id="1_68ugh"]
+[ext_resource type="PackedScene" uid="uid://kevyiwyfoflr" path="res://Objects/transition.tscn" id="3_lpifb"]
+
+[node name="Endgame" type="Node2D"]
+script = ExtResource("1_68ugh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_30ri7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Transition" parent="Control" instance=ExtResource("3_lpifb")]
+layout_mode = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
