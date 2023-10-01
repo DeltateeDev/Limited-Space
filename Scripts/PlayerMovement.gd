@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
 	
 	#player states
+	var is_moving := Input.is_action_pressed("LEFT") || Input.is_action_pressed("RIGHT")
 	var is_falling := velocity.y > 0.0 && !is_on_floor()
 	var is_jumping := (Input.is_action_just_pressed("SPACE") && is_on_floor()) || (jump_buffered && is_on_floor())
 	var is_jump_cancelled := Input.is_action_just_released("SPACE") && velocity.y < 0.0
@@ -53,6 +54,25 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("SPACE"):
 		$JumpTimer.start()
+		
+	if is_moving && !$AnimationPlayer.is_playing():
+		$AnimationPlayer.play("moving")
+		
+	if !is_moving:
+		$PlayerSprite.scale.x = 1
+		$PlayerSprite.skew = 0
+	
+	if Input.is_action_pressed("LEFT"):
+		$PlayerSprite.skew = 0.07
+	elif Input.is_action_pressed("RIGHT"):
+		$PlayerSprite.skew = -0.07
+		
+	if Input.is_action_just_pressed("LEFT"):
+		$AnimationTurn.stop()
+		$AnimationTurn.play("turnleft")
+	elif Input.is_action_just_pressed("RIGHT"):
+		$AnimationTurn.stop()
+		$AnimationTurn.play("turnright")
 
 	move_and_slide()
 
@@ -65,4 +85,3 @@ func _on_jump_availability_timeout() -> void:
 func ErrorAnimation() -> void:
 	emit_signal("nospaces")
 	velocity.y = -75
-	pass

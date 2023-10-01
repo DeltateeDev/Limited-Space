@@ -1,7 +1,8 @@
+AnimationPlayer
+AnimationTree
 Camera2D
 Node2D
 Node
-AnimationPlayer
 Control
 Sprite2D
 CollisionShape2D
